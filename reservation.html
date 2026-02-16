@@ -9,32 +9,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="reser.css">
 </head>
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 
 <body>
 
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <div class="logo-img-container">
-                    <img src="grand palace.png" alt="Grand palace">
-                </div>
-                <div class="logo-text">
-                    <span class="brand">Grand palace</span>
-                    <span class="motto">L’élégance et le confort réunis en un seul lieu</span>
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-               <a href="chambre.html">Nos chambres</a>
-               <a href="services.html">services</a>
-               <a href="nous.html">Nous contacter </a>
-                
+       <nav class="navbar">
+    
+    <div class="logo">
+        <div class="logo-img-container">
+            <img src="grand palace.png" alt="Grand palace">
+        </div>
+        <div class="logo-text">
+            <span class="brand">Grand palace</span>
+            <span class="motto">L’élégance et le confort réunis en un seul lieu</span>
+        </div>
+    </div>
 
-            </ul>
-            <div class="nav-actions">
-                <a href="inscription.html" class="btn-cta">S'inscrire</a>
-            </div>
-        </nav>
+    <!-- Bouton Hamburger -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="chambre.html">Nos chambres</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="nous.html">Nous contacter</a></li>
+        <li><a href="inscription.html" class="btn-cta">S'inscrire</a></li>
+    </ul>
+
+</nav>
+
     </header>
 
     <main class="payment-hero">
