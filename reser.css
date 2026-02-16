@@ -1,0 +1,268 @@
+:root {
+    --gold: #b89754;
+    --noir: #0f1113;
+    --gris: #f8f9fa;
+    --vert: #198754;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+}
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img-container {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    overflow: hidden;
+}
+
+.logo-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand {
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.motto {
+    display: block;
+    font-size: 0.6rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.nav-pay {
+    color: var(--gold) !important;
+    font-weight: 800 !important;
+}
+
+.btn-cta {
+    background: var(--vert);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+
+.payment-hero {
+    padding: 60px 0;
+    background: var(--gris);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 30px;
+}
+
+.payment-form-box {
+    background: #fff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    font-size: 0.8rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 10px;
+}
+
+.method-option {
+    flex: 1;
+    cursor: pointer;
+}
+
+.method-option input {
+    display: none;
+}
+
+.method-card {
+    border: 2px solid #eee;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.method-option input:checked+.method-card {
+    border-color: var(--gold);
+    background: #fdfaf3;
+}
+
+.pay-button {
+    width: 100%;
+    background: var(--noir);
+    color: #fff;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+
+
+.summary-card {
+    background: var(--noir);
+    color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    position: sticky;
+    top: 100px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #aaa;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--gold);
+    margin-top: 20px;
+}
+
+.promo {
+    color: #2ecc71 !important;
+}
+
+
+.main-footer {
+    background: var(--noir);
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.logo-footer span {
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-weight: 800;
+}
+
+.footer-contact h4 {
+    margin-bottom: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #444;
+}
+
+@media (max-width: 800px) {
+    .payment-grid {
+        grid-template-columns: 1fr;
+    }
+}

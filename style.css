@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945") no-repeat center center/cover;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+.hero-content {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: 100vh;
+    background-position: center top;
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+}
