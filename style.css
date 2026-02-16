@@ -5,27 +5,36 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* HERO SECTION */
 header {
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945") no-repeat center center/cover;
+    background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945") no-repeat center;
+    background-size: cover;
+    background-position: center;
     position: relative;
-}
-
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    height: 100%;
     color: white;
 }
 
+/* Overlay */
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* NAVIGATION */
 nav {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 20px 30px;
     align-items: center;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -45,27 +54,32 @@ nav ul li a:hover {
     color: gold;
 }
 
+/* HERO CONTENT */
 .hero-content {
-    height: 80%;
+    position: relative;
+    z-index: 2;
+    height: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;  
+    padding: 0 20px;
 }
 
 .hero-content h1 {
-    font-size: 50px;
+    font-size: 48px;
     margin-bottom: 15px;
 }
 
 .hero-content p {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 30px;
 }
 
+/* BUTTON */
 .btn {
-    padding: 12px 30px;
+    padding: 14px 35px;
     background: gold;
     color: black;
     text-decoration: none;
@@ -77,52 +91,28 @@ nav ul li a:hover {
 .btn:hover {
     background: white;
 }
-.hero {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
+/* MOBILE */
 @media (max-width: 768px) {
 
-  .hero {
-    height: 100vh;
-    background-position: center top;
-    padding: 0 20px;
-  }
+    nav ul {
+        display: none;
+    }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+    .hero-content h1 {
+        font-size: 32px;
+    }
 
-  .hero p {
-    font-size: 1rem;
-  }
+    .hero-content p {
+        font-size: 16px;
+    }
 
-  .btn {
-    padding: 12px 25px;
-    font-size: 1rem;
-  }
+    .btn {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
 
+    header {
+        background-position: center top;
+    }
 }
-.hero {
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-@media (max-width: 768px) {
-  .hero {
-    background-position: top;
-  }
-}
-background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945") no-repeat center;
-background-size: cover;
-background-position: center;
-
-
