@@ -29,8 +29,8 @@ nav {
     z-index: 2;
     display: flex;
     justify-content: space-between;
-    padding: 20px 30px;
     align-items: center;
+    padding: 20px 40px;
 }
 
 .logo {
@@ -41,17 +41,25 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
     color: gold;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 /* HERO CONTENT */
@@ -95,8 +103,24 @@ nav ul li a:hover {
 /* MOBILE */
 @media (max-width: 768px) {
 
+    .menu-toggle {
+        display: block;
+    }
+
     nav ul {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        width: 220px;
+        padding: 20px;
         display: none;
+        border-radius: 10px 0 0 10px;
+    }
+
+    nav ul.active {
+        display: flex;
     }
 
     .hero-content h1 {
@@ -116,23 +140,3 @@ nav ul li a:hover {
         background-position: center top;
     }
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    color: white;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-}
-
