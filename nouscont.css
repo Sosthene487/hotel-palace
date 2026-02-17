@@ -118,3 +118,17 @@
     justify-content: space-between;
     align-items: center;
 }
+.contact-header {
+    height: 60vh;
+    background: url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2") no-repeat center/cover;
+    position: relative;
+    color: white;
+}
+
+.contact-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
