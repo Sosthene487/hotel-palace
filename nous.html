@@ -8,53 +8,70 @@
 </head>
 <body>
 
-   
-    <nav class="navbar">
-    <h2 class="logo">Grand Palace
-         <p>L’élégance et le confort réunis en un seul lieu</p>
-    </h2>
-   
-    <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="chambre.html">Chambres</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="nous.html">Contact</a></li>
-    </ul>
-</nav>
+<header class="contact-header">
 
+    <nav>
+        <h2 class="logo">Grand Palace Hotel</h2>
 
-    
-    <section class="contact-hero">
+        <!-- Hamburger -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="chambre.html">Chambres</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="nous.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-content">
         <h1>Contactez-nous</h1>
         <p>Nous sommes à votre écoute 24h/24</p>
-    </section>
+    </div>
 
-    
-    <section class="contact-container">
+</header>
 
-        
-        <div class="contact-form">
-            <h2>Envoyer un message</h2>
-            <form>
-                <input type="text" placeholder="Votre nom" required>
-                <input type="email" placeholder="Votre email" required>
-                <input type="text" placeholder="Sujet">
-                <textarea placeholder="Votre message" rows="5"></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
 
-       
-        <div class="contact-info">
-            <h2>Informations</h2>
-            <p><strong>📍 Adresse :</strong> Gombe | Ngaliema, Kinshasa</p>
-            <p><strong>📞 Téléphone :</strong> +243 123 45 67 89</p>
-            <p><strong>✉ Email :</strong> contact@grandpalace.com</p>
-            <p><strong>🕒 Horaires :</strong> 24h / 7j</p>
-        </div>
+<section class="contact-container">
 
-    </section>
+    <div class="contact-form">
+        <h2>Envoyer un message</h2>
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <input type="text" placeholder="Sujet">
+            <textarea placeholder="Votre message" rows="5"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <h2>Informations</h2>
+        <p><strong>📍 Adresse :</strong> Gombe | Ngaliema, Kinshasa</p>
+        <p><strong>📞 Téléphone :</strong> +243 123 45 67 89</p>
+        <p><strong>✉ Email :</strong> contact@grandpalace.com</p>
+        <p><strong>🕒 Horaires :</strong> 24h / 7j</p>
+    </div>
+
+</section>
+
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll("#nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+</script>
 
 </body>
 </html>
-
